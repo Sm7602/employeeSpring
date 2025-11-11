@@ -16,6 +16,35 @@
       <property name="gender" value="latter"/>
        <property name="salary" value="2000000"/>
         <property name="address" ref="add"/>
+        <property name="list">
+         <list>
+              <value>123</value>
+              <value>1234</value>
+              <value>13</value>
+              <value>12</value>
+              <value>23</value>
+         </list>
+        </property>
+        
+        <property name="set">
+         <set>
+               <value>123</value>
+               <value>1234</value>
+               <value>13</value>
+               <value>12</value>
+               <value>23</value>
+         </set>
+        </property>
+        
+         <property name="map">
+         <map>
+                <entry key="1" value="ONE" />
+				<entry key="2" value="TWO" />
+				<entry key="5" value="FIVE" />
+				<entry key="3" value="THREE" />
+				<entry key="1" value="one" />
+         </map>
+        </property>
     </bean>
     
     <bean name="e2" class="com.spring.employee.entity.Employee">
@@ -24,6 +53,39 @@
     <constructor-arg name="gnder" value="ghdhgd"/>
     <constructor-arg name="salary" value="2051002"/>
      <constructor-arg  name="address" ref="add"/>
+     
+     <constructor-arg>
+         <list>
+              <value>123</value>
+              <value>1234</value>
+              <value>13</value>
+              <value>12</value>
+              <value>23</value>
+         </list>
+     </constructor-arg>
+     
+      <constructor-arg>
+           <set>
+               <value>123</value>
+               <value>1234</value>
+               <value>13</value>
+               <value>12</value>
+               <value>23</value>
+         </set>
+     </constructor-arg>
+     
+     <constructor-arg>
+          <map>
+                <entry key="1" value="ONE" />
+				<entry key="2" value="TWO" />
+				<entry key="5" value="FIVE" />
+				<entry key="3" value="THREE" />
+				<entry key="1" value="one" />
+         </map>
+     </constructor-arg>
+     
+     
+   
     </bean>
 
 </beans>
