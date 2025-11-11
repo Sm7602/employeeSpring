@@ -5,25 +5,19 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
+    
     <bean name="add" class="com.spring.employee.entity.Address">
     <property name="city" value="noida"/>
      <property name="state" value="up"/>
     </bean>
     
-    <bean name="e1" class="com.spring.employee.entity.Employee">
+    <bean name="e2" class="com.spring.employee.entity.Employee" autowire="byType">
     <property name="id" value="1"/>
      <property name="name" value="abc"/>
       <property name="gender" value="latter"/>
-       <property name="salary" value="2000000"/>
-        <property name="address" ref="add"/>
+       <property name="salary" value="2000000"/>     
     </bean>
     
-    <bean name="e2" class="com.spring.employee.entity.Employee">
-    <constructor-arg name="id" value="2"/>
-    <constructor-arg name="name" value="def"/>
-    <constructor-arg name="gnder" value="ghdhgd"/>
-    <constructor-arg name="salary" value="2051002"/>
-     <constructor-arg  name="address" ref="add"/>
-    </bean>
+   
 
 </beans>
