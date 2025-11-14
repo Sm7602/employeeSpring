@@ -1,6 +1,7 @@
 package com.spring.employee.entity;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -10,9 +11,9 @@ public class Employee {
 	private String gender;
 	private int salary;
 	@Autowired
-	private Address address;
+	private Iaddress address;
 	
-	public Employee(int id, String name, String gender, int salary, Address address) {
+	public Employee(int id, String name, String gender, int salary, Iaddress address) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -49,10 +50,11 @@ public class Employee {
 		this.salary = salary;
 	}
 	
-	public Address getAddress() {
+	public Iaddress getAddress() {
 		return address;
 	}
-	public void setAddress(Address address) {
+	@Qualifier("address2")
+	public void setAddress(Iaddress address) {
 		this.address = address;
 	}
 	@Override

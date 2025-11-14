@@ -1,8 +1,10 @@
 package com.spring.employee.entity;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
+//@Primary
 public class Address {
 	private String city;
 	private String state;
