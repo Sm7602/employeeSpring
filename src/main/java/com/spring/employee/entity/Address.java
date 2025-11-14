@@ -1,5 +1,8 @@
 package com.spring.employee.entity;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Address {
 	private String city;
 	private String state;
